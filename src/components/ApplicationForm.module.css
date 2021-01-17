@@ -1,0 +1,19 @@
+.applicationForm {
+  width: 100%;
+  background-color: yellow;
+}
+
+@media screen and (min-width: 768px) {
+  .applicationForm {
+    width: 285px;
+    height: 100%;
+  }
+
+}
+
+@media screen and (min-width: 1100px) {
+  .applicationForm {
+    /*max-height: 700px;*/
+    height: max-content; /* ???? */
+  }
+}

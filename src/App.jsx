@@ -1,4 +1,4 @@
-import { Header } from './components/index';
+import { Header, Content, Footer } from './components/index';
 
 import styles from './App.module.css';
 
@@ -7,6 +7,9 @@ function App() {
     <div className={styles.App}>
       <Header />
       
+      <Content />
+      
+      <Footer />
     </div>
   );
 }

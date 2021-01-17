@@ -1,0 +1,29 @@
+.content {
+  display: flex;
+  flex-direction: column;
+  background-color: pink;
+  height: 100%;
+}
+
+.mainText {
+  width: 100%;
+  background-color: red;
+  flex-grow: 1;
+}
+
+@media screen and (min-width: 768px) {
+  .content {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .content {
+    padding: 0 110px;
+  }
+
+  .mainText {
+    width: calc(100% - 285px);
+  }
+}
