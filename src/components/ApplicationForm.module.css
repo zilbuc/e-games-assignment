@@ -1,7 +1,7 @@
 .applicationForm {
   width: 100%;
   background-color: var(--main-background);
-  padding: 0 20px;
+  padding: 15px 20px;
   box-sizing: border-box;
 }
 
