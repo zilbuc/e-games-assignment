@@ -5,7 +5,7 @@
 
 @media screen and (min-width: 768px) {
   .infoBlocks {
-    width: calc(100vw - var(--width-application-form));
+    width: calc(100% - var(--width-application-form));
   }
 }
 

@@ -1,0 +1,36 @@
+.mainText {
+  width: 100%;
+  background-color: var(--text-white);
+  flex-grow: 1;
+  outline: 1px solid rgba(160, 156, 166, 0.3);
+  padding: 10px 20px 20px;
+  box-sizing: border-box;
+}
+
+.title {
+  font-size: var(--font-title);
+  font-family: 'Quantico-Bold', serif;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.body {
+
+}
+
+.paragraph {
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    text-align: left;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .mainText {
+    width: calc(100% - var(--width-application-form));
+  }
+}
+
