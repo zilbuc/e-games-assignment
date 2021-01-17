@@ -1,0 +1,120 @@
+.mainMenu {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  position: relative;
+  font-size: 20px;
+  line-height: 2.2;
+}
+
+.mainSubMenu {
+  line-height: 1.7;
+}
+
+.mainMenu a {
+  text-decoration: none;
+  color: white;
+  padding-left: 20px;
+}
+
+.mainMenu a:hover {
+  color: pink;
+}
+
+.submenu {
+  display: none;
+  width: 180px;
+  position: absolute;
+  top: 5px;
+  left: 160px;
+  background: red;
+  border-radius: 8px;
+}
+
+.submenu .menuItem a {
+  color: black;
+  font-size: 16px;
+  padding: 7px 115px 7px 20px;
+}
+
+.mainSubMenu .menuItem:not(:last-child) {
+  border-bottom: 1px solid black;
+}
+
+.submenu .menuItem:hover {
+  background-color: pink;
+}
+
+.submenu .menuItem a:hover {
+  color: white;
+}
+
+.displaySubmenu {
+  display: block;
+}
+
+.submenuArrow {
+  position: absolute;
+  top: 10px;
+  left: -8px;
+  width: 15px;
+  height: 15px;
+  transform: rotate(45deg);
+  background-color: red;
+}
+
+@media screen and (min-width: 500px) {
+  .mainMenu {
+    flex-direction: row;
+    max-width: 485px;
+    justify-content: space-between;
+  }
+
+  .mainMenu a {
+    padding-left: 0;
+  }
+
+  .mainSubMenu {
+    flex-direction: column;
+  }
+
+  .mainSubMenu .menuItem:first-child {
+    padding-top: 8px;
+  }
+
+  .submenu {
+    top: 44px;
+    left: -20px;
+  }
+
+  .submenu a {
+    padding-left: 20px;
+  }
+
+  .submenuArrow {
+    top: -8px;
+    left: 15px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .mainMenu {
+    max-width: 440px;
+  }
+
+  .mainMenu:not(.mainSubMenu) {
+    line-height: 2.6;
+  }
+
+  .submenu {
+    top: 52px;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .mainMenu {
+    max-width: 485px;
+  }
+
+}
