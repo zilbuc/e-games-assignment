@@ -1,6 +1,6 @@
-import { ApplicationForm, InfoBlocks, MainText } from './index'
+import { ApplicationForm, InfoBlocks, MainText } from './index';
 
-import styles from './Content.module.css'
+import styles from './Content.module.css';
 
 export const Content = () => {
   

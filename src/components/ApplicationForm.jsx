@@ -1,12 +1,13 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 
-import styles from './ApplicationForm.module.css'
+import styles from './ApplicationForm.module.css';
 
 const content = {
   title: 'Quisque a justo',
   body: 'Yr 8-bit marfa gochujang. Id microdosing artisan iPhone in enamel pin air plant food truck tattooed flannel. Knausgaard vaporware kogi, tempor meditation kinfolk iPhone. '
 }
+
 export const ApplicationForm = () => {
   const {
     errors,

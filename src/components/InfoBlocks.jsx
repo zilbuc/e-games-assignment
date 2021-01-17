@@ -1,5 +1,5 @@
 
-import styles from './InfoBlocks.module.css'
+import styles from './InfoBlocks.module.css';
 
 const content = {
   body: [

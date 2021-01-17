@@ -1,5 +1,4 @@
-import styles from './MainText.module.css'
-
+import styles from './MainText.module.css';
 
 const content = {
   title: 'Crucifix cronut occupy shoreditch occaecat',

@@ -19,5 +19,6 @@
 
   --width-main-menu: 485px;
   --width-application-form: 285px;
-  --padding-content: 110px;
+  --padding-mobile: 20px;
+  --padding-content-desktop: 110px;
 }
