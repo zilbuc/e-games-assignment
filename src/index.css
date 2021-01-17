@@ -3,9 +3,14 @@
   src: local('Quantico'), url(./fonts/Quantico-Regular.ttf) format('truetype')
 }
 
+@font-face {
+  font-family: 'Quantico-Bold';
+  src: local('Quantico-Bold'), url(./fonts/Quantico-Bold.ttf) format('truetype')
+}
+
 body {
   margin: 0;
-  font-family: 'Quantico', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Quantico', 'Quantico-Bold', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;

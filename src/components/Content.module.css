@@ -10,6 +10,7 @@
   width: 100%;
   background-color: var(--text-white);
   flex-grow: 1;
+  outline: 1px solid rgba(160, 156, 166, 0.3);
 }
 
 @media screen and (min-width: 768px) {
@@ -21,10 +22,12 @@
 
 @media screen and (min-width: 1100px) {
   .content {
-    padding: 0 var(--padding-content);
+    padding: 40px var(--padding-content) 30px;
+    box-sizing: border-box;
   }
 
   .mainText {
     width: calc(100% - var(--width-application-form));
+    height: fit-content;
   }
 }
