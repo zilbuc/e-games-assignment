@@ -1,13 +1,14 @@
 .content {
   display: flex;
   flex-direction: column;
-  background-color: pink;
+  background-color: var(--main-background);
   height: 100%;
+  color: var(--text-main);
 }
 
 .mainText {
   width: 100%;
-  background-color: red;
+  background-color: var(--text-white);
   flex-grow: 1;
 }
 
@@ -20,10 +21,10 @@
 
 @media screen and (min-width: 1100px) {
   .content {
-    padding: 0 110px;
+    padding: 0 var(--padding-content);
   }
 
   .mainText {
-    width: calc(100% - 285px);
+    width: calc(100% - var(--width-application-form));
   }
 }

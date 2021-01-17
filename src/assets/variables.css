@@ -1,0 +1,23 @@
+:root {
+  --font-main: 16px;
+  --font-small: 14px;
+  --font-large: 22px;
+  --font-title: 30px;
+
+  --text-main: #0D1129;
+  --text-white: white;
+  --text-shadow: #A09CA6;
+  --text-footer: #40454C;
+
+  --main-background: #F0EEF2;
+  --header-background: #4D1BA8;
+  --footer-background: #A4A2A6;
+
+  --color-pink: #EF4B74;
+  --color-submenu-border: #BF3B5C;
+  --color-submenu-background: #FF6F93;
+
+  --width-main-menu: 485px;
+  --width-application-form: 285px;
+  --padding-content: 110px;
+}

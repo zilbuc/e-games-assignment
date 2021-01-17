@@ -4,50 +4,54 @@
   flex-direction: column;
   width: 100%;
   position: relative;
-  font-size: 20px;
+  font-size: var(--font-main);
   line-height: 2.2;
 }
 
+.mainMenu:not(.mainSubMenu) {
+  padding-top: 10px;
+}
+
 .mainSubMenu {
-  line-height: 1.7;
+  line-height: 1.5;
 }
 
 .mainMenu a {
   text-decoration: none;
-  color: white;
+  color: var(--text-white);
   padding-left: 20px;
 }
 
 .mainMenu a:hover {
-  color: pink;
+  color: var(--color-pink);
 }
 
 .submenu {
   display: none;
   width: 180px;
   position: absolute;
-  top: 5px;
-  left: 160px;
-  background: red;
+  top: 12px;
+  left: 140px;
+  background: var(--color-pink);
   border-radius: 8px;
 }
 
 .submenu .menuItem a {
   color: black;
-  font-size: 16px;
+  font-size: var(--font-main);
   padding: 7px 115px 7px 20px;
 }
 
 .mainSubMenu .menuItem:not(:last-child) {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid var(--color-submenu-border);
 }
 
 .submenu .menuItem:hover {
-  background-color: pink;
+  background-color: var(--color-submenu-background);
 }
 
 .submenu .menuItem a:hover {
-  color: white;
+  color: var(--text-white);
 }
 
 .displaySubmenu {
@@ -56,19 +60,20 @@
 
 .submenuArrow {
   position: absolute;
-  top: 10px;
-  left: -8px;
+  top: 7px;
+  left: -7px;
   width: 15px;
   height: 15px;
   transform: rotate(45deg);
-  background-color: red;
+  background-color: var(--color-pink);
 }
 
 @media screen and (min-width: 500px) {
   .mainMenu {
     flex-direction: row;
-    max-width: 485px;
+    max-width: var(--width-main-menu);;
     justify-content: space-between;
+    font-size: var(--font-large);
   }
 
   .mainMenu a {
@@ -84,7 +89,7 @@
   }
 
   .submenu {
-    top: 44px;
+    top: 58px;
     left: -20px;
   }
 
@@ -108,13 +113,13 @@
   }
 
   .submenu {
-    top: 52px;
+    top: 67px;
   }
 }
 
 @media screen and (min-width: 1100px) {
   .mainMenu {
-    max-width: 485px;
+    max-width: var(--width-main-menu);
   }
 
 }

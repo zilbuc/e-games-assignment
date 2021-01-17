@@ -1,11 +1,11 @@
 .applicationForm {
   width: 100%;
-  background-color: yellow;
+  background-color: var(--main-background);
 }
 
 @media screen and (min-width: 768px) {
   .applicationForm {
-    width: 285px;
+    width: var(--width-application-form);
     height: 100%;
   }
 
