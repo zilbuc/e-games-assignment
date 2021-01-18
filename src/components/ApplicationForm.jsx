@@ -3,12 +3,7 @@ import * as Yup from 'yup';
 
 import styles from './ApplicationForm.module.css';
 
-const content = {
-  title: 'Quisque a justo',
-  body: 'Yr 8-bit marfa gochujang. Id microdosing artisan iPhone in enamel pin air plant food truck tattooed flannel. Knausgaard vaporware kogi, tempor meditation kinfolk iPhone. '
-}
-
-export const ApplicationForm = () => {
+export const ApplicationForm = ({ title, body }) => {
   const {
     errors,
     handleChange,
@@ -40,8 +35,8 @@ export const ApplicationForm = () => {
   
   return (
     <div className={styles.applicationForm}>
-      <div className={styles.title}>{content.title}</div>
-      <div className={styles.content}>{content.body}</div>
+      <div className={styles.title}>{title}</div>
+      <div className={styles.content}>{body}</div>
       
       <form
         className={styles.form}

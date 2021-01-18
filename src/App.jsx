@@ -1,17 +1,26 @@
 import { Header, Content, Footer } from './components/index';
+import { useQuery } from '@apollo/client';
+import { getPageBody } from './utils/helpers';
+import { GET_HEADER_FOOTER_DATA } from './utils/dataQueries';
 
 import styles from './App.module.css';
 
-function App() {
+export const App = () => {
+  
+  const { data } = useQuery(GET_HEADER_FOOTER_DATA)
+  
+  const linksForFooter = data ? data.navigation : []
+  const linksForHeader = linksForFooter.filter((el, index) => index !== 0)
+
+  const footerContent = getPageBody(data?.pageData[0])
+  
   return (
     <div className={styles.App}>
-      <Header />
+      <Header links={linksForHeader} />
       
       <Content />
       
-      <Footer />
+      <Footer links={linksForFooter} content={footerContent} />
     </div>
   );
 }
-
-export default App;

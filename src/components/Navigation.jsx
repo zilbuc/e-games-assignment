@@ -3,16 +3,13 @@ import classNames from 'classnames';
 
 import styles from './Navigation.module.css';
 
-export const Navigation = ({ menuLinks, submenu }) => {
-  // console.log({
-  //  menuLinks
-  // })
+export const Navigation = ({ menuLinks, isSubmenu }) => {
   
   const [ showSubmenu, setShowSubmenu ] = useState("")
   
   return (
     <nav className={classNames(styles.mainMenu, {
-      [styles.mainSubMenu]: submenu
+      [styles.mainSubMenu]: isSubmenu
     })}>
       {
         menuLinks.map(({ id, value, submenu }) => {
@@ -34,7 +31,7 @@ export const Navigation = ({ menuLinks, submenu }) => {
                           })}>
                             <div className={classNames(styles.submenuArrow)} />
           
-                            <Navigation menuLinks={submenu} submenu />
+                            <Navigation menuLinks={submenu} isSubmenu />
                           </div>
                         )
                       : null
@@ -48,5 +45,5 @@ export const Navigation = ({ menuLinks, submenu }) => {
 }
 
 Navigation.defaultProps = {
-  submenu: false
+  isSubmenu: false
 }
