@@ -1,7 +1,6 @@
 .mainText {
   width: 100%;
   background-color: var(--text-white);
-  flex-grow: 1;
   outline: 1px solid rgba(160, 156, 166, 0.3);
   padding: 10px var(--padding-mobile) var(--padding-mobile);
   box-sizing: border-box;
@@ -12,10 +11,6 @@
   font-family: 'Quantico-Bold', serif;
   margin-bottom: 15px;
   text-align: center;
-}
-
-.body {
-
 }
 
 .paragraph {
