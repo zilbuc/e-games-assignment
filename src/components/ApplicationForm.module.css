@@ -42,10 +42,12 @@
   font-family: 'Quantico', serif;
   width: calc(100% - 20px);
   margin-bottom: 15px;
+  outline: none;
 }
 
 .form textarea {
   min-height: 100px;
+  resize: none;
 }
 
 .errorMessage, .errorMessageTextArea {

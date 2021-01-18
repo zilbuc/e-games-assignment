@@ -1,4 +1,4 @@
-import { gql } from '@apollo/client'
+import { gql } from '@apollo/client';
 
 export const GET_HEADER_FOOTER_DATA = gql`
   query {
@@ -36,6 +36,16 @@ export const GET_PAGE_DATA = gql`
       pageContent {
         body
       }
+    }
+  }
+`
+
+export const POST_MESSAGE = gql`
+  mutation PostMessage($firstName: String!, $lastName: String!, $message: String!) {
+    postMessage(firstName: $firstName, lastName: $lastName, message: $message) {
+      firstName
+      lastName
+      message
     }
   }
 `

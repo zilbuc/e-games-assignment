@@ -1,7 +1,7 @@
 import { Header, Content, Footer } from './components/index';
 import { useQuery } from '@apollo/client';
 import { getPageBody } from './utils/helpers';
-import { GET_HEADER_FOOTER_DATA } from './utils/dataQueries';
+import { GET_HEADER_FOOTER_DATA } from './utils/graphqlUtils';
 
 import styles from './App.module.css';
 

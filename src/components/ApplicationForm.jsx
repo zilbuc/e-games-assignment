@@ -1,9 +1,13 @@
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
+import { useMutation } from '@apollo/client';
+import { POST_MESSAGE } from '../utils/graphqlUtils';
 
 import styles from './ApplicationForm.module.css';
 
 export const ApplicationForm = ({ title, body }) => {
+  const [ postMessage ] = useMutation(POST_MESSAGE)
+  
   const {
     errors,
     handleChange,
@@ -26,12 +30,20 @@ export const ApplicationForm = ({ title, body }) => {
       message: Yup.string()
         .required("Required!"),
     }),
-    onSubmit: values => {
-      console.log({ values })
-      setSubmitting(false);
-      handleReset(values);
+    onSubmit: ({ firstName, lastName, message }) => {
+  
+      postMessage({ variables: {
+          firstName: firstName,
+          lastName: lastName,
+          message: message
+        }})
+        .then(resp => console.log('Great success!'))
+        .catch(err => console.log(err))
+      
+      setSubmitting(false)
+      handleReset()
     }
-  });
+  })
   
   return (
     <div className={styles.applicationForm}>
@@ -43,7 +55,7 @@ export const ApplicationForm = ({ title, body }) => {
         onSubmit={handleSubmit}
       >
         <div>
-          <label>First name</label>
+          <label htmlFor="firstName">First name</label>
           <input
             type="text"
             name="firstName"
@@ -56,7 +68,7 @@ export const ApplicationForm = ({ title, body }) => {
           )}
         </div>
         <div>
-          <label>Last name</label>
+          <label htmlFor="lastName">Last name</label>
           <input
             type="text"
             name="lastName"
@@ -69,7 +81,7 @@ export const ApplicationForm = ({ title, body }) => {
           )}
         </div>
         <div>
-          <label>Your message</label>
+          <label htmlFor="message">Your message</label>
           <textarea
             name="message"
             value={message}

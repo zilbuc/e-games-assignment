@@ -1,7 +1,7 @@
 import { ApplicationForm, InfoBlocks, MainText } from './index';
 import { useQuery } from '@apollo/client';
 import { getPageBody, getPageTitle } from '../utils/helpers';
-import { GET_PAGE_DATA } from '../utils/dataQueries';
+import { GET_PAGE_DATA } from '../utils/graphqlUtils';
 
 import styles from './Content.module.css';
 
