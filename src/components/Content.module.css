@@ -16,6 +16,5 @@
   .content {
     padding: 40px var(--padding-content-desktop) 30px;
     box-sizing: border-box;
-    height: 100%;
   }
 }
